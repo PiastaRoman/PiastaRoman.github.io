@@ -1,13 +1,13 @@
 const images = [
-  "images/ironman.jpg",
-  "images/AoU_Hulk_01 (1).jpg",
-  "images/blackwidow.png",
-  "images/Captain-America-AOU-Render.jpg",
-  "images/Hawkeye_Marvel.jpg",
-  "images/Thor_Marvel.jpg",
+  "/flipCard/images/ironman.jpg",
+  "/flipCard/images/AoU_Hulk_01 (1).jpg",
+  "/flipCard/images/blackwidow.png",
+  "/flipCard/images/Captain-America-AOU-Render.jpg",
+  "/flipCard/images/Hawkeye_Marvel.jpg",
+  "/flipCard/images/Thor_Marvel.jpg",
 ];
 
-const thumbNailImage = "/images/0e5ff160c652d000ebb409a754653d23.jpg";
+const thumbNailImage = "/flipCard/images/0e5ff160c652d000ebb409a754653d23.jpg";
 
 const gameCards = document.getElementsByClassName("game-container__card");
 
