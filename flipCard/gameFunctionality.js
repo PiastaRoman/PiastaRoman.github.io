@@ -110,4 +110,3 @@ function reset() {
   location.reload();
 }
 
-//test 
