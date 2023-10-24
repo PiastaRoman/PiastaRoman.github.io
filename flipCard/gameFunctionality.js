@@ -109,3 +109,5 @@ function getRandomImage() {
 function reset() {
   location.reload();
 }
+
+//test 
