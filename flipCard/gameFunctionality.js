@@ -27,6 +27,8 @@ let swatchSelected = [];
 
 let selectedCardImages = [];
 
+let clickEnabled = true;
+
 for (const gameCard of gameCards) {
   const cardImage = gameCard.querySelector("img");
 
@@ -35,6 +37,10 @@ for (const gameCard of gameCards) {
 
 for (const gameCard of gameCards) {
   gameCard.addEventListener("click", () => {
+
+    if (!clickEnabled) {
+      return; 
+    }
 
     const cardImage = gameCard.querySelector("img");
 
@@ -49,6 +55,7 @@ for (const gameCard of gameCards) {
     imagesSelected++;
 
     if (imagesSelected === 2) {
+      clickEnabled = false;
       if (swatchSelected[0] !== swatchSelected[1]) {
 
         for (let i = 0; i < selectedCardImages.length; i++) {
@@ -57,6 +64,7 @@ for (const gameCard of gameCards) {
 
           setTimeout(() => {
             cardImageToUpdate.src = thumbNailImage;
+            clickEnabled = true;
           }, 1000);
         }
         imagesSelected = 0;
@@ -75,6 +83,8 @@ for (const gameCard of gameCards) {
         swatchSelected = [];
 
         selectedCardImages = [];
+
+        clickEnabled = true;
 
         if (pointsCounter === 6) {
           winMessage.classList.replace('hide', 'show');
